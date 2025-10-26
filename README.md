@@ -16,9 +16,27 @@ A grandMA3 Lua plugin that reads **RGB** values from **Color Preset Pool (4)** a
 - Color presets stored in **Color Preset Pool (4)** as **Universal** presets with RGB data.
 
 ## Installation
-1. Copy `NameColors.lua` into your project (you may use a `plugins/` folder).
-2. In grandMA3, create a **Plugin** and paste the content of `NameColors.lua`.
-3. Save your showfile.
+
+### Option A — Create a new plugin inside the showfile (no external files)
+1. Open the **Plugin Pool** (Setup → Plugins or via Pools view).
+2. **Edit** an empty plugin slot (tap-and-hold or right-click → *Edit*).
+3. In the editor, create a new **Lua** component (e.g., *Add Component → Lua*).
+4. **Paste** the Lua source code of `NameColors.lua` into the editor pane.
+5. **Save** the plugin.
+6. **Rename** the plugin to **“Name Colors”** (Edit the pool item → *Name*).
+
+This stores the code inside the showfile; no file paths needed.
+
+### Option B — Import `.lua` from USB / library (stored into showfile)
+1. Put your `NameColors.lua` on a USB under `gma3_library/datapools/plugins/`.
+2. In the **Plugin Pool**, **Edit** an empty slot and tap **Import**, choose the USB, and select `NameColors.lua`.
+3. Save; the plugin code is now embedded in the showfile.
+
+### Option C — Reference an external `.lua` (reloadable)
+1. Place `NameColors.lua` in `gma3_library/datapools/plugins/` (internal drive or USB).
+2. In the **Plugin Pool**, **Edit** the plugin and set **FileName** to `NameColors.lua`.
+3. Use **ReloadAllPlugins** when you update the external file to apply changes.
+
 
 ## Usage
 1. Run the **Name Colors** plugin.
