@@ -68,4 +68,7 @@ This stores the code inside the showfile; no file paths needed.
 3. Open a Pull Request with a concise description.
 
 ## License
-Recommended: **MIT** (add a `LICENSE` file if desired).
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for details.  
+SPDX-License-Identifier: MIT
+
