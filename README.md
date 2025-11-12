@@ -1,6 +1,6 @@
-# Name-Colors-GMA3
+# Label-Colors-MA3
 
-A grandMA3 Lua plugin that reads **RGB** values from **Color Preset Pool (4)** and assigns the **nearest color name** from a selectable table (full HTML/CSS named colors or a basic set).
+A grandMA3 Lua plugin that reads **RGB** values from **Color Preset Pool (4)** and assigns the **nearest color name** from a selectable table (full HTML/CSS named colors or a basic set). It then **labels** each preset with that name.
 
 > **Tested scope:** This plugin has been **tested only with Universal Color presets** stored as RGB in Pool 4. Other feature modes (CMY/HSV/CT) or non-Universal presets may require adjustments to the extractor.
 
@@ -21,25 +21,24 @@ A grandMA3 Lua plugin that reads **RGB** values from **Color Preset Pool (4)** a
 1. Open the **Plugin Pool** (Setup → Plugins or via Pools view).
 2. **Edit** an empty plugin slot (tap-and-hold or right-click → *Edit*).
 3. In the editor, create a new **Lua** component (e.g., *Add Component → Lua*).
-4. **Paste** the Lua source code of `NameColors.lua` into the editor pane.
+4. **Paste** the Lua source code of `LabelColors.lua` into the editor pane.
 5. **Save** the plugin.
-6. **Rename** the plugin to **“Name Colors”** (Edit the pool item → *Name*).
+6. **Rename** the plugin to **“Label Colors”** (Edit the pool item → *Name*).
 
 This stores the code inside the showfile; no file paths needed.
 
 ### Option B — Import `.lua` from USB / library (stored into showfile)
-1. Put your `NameColors.lua` on a USB under `gma3_library/datapools/plugins/`.
-2. In the **Plugin Pool**, **Edit** an empty slot and tap **Import**, choose the USB, and select `NameColors.lua`.
+1. Put your `LabelColors.lua` on a USB under `gma3_library/datapools/plugins/`.
+2. In the **Plugin Pool**, **Edit** an empty slot and tap **Import**, choose the USB, and select `LabelColors.lua`.
 3. Save; the plugin code is now embedded in the showfile.
 
 ### Option C — Reference an external `.lua` (reloadable)
-1. Place `NameColors.lua` in `gma3_library/datapools/plugins/` (internal drive or USB).
-2. In the **Plugin Pool**, **Edit** the plugin and set **FileName** to `NameColors.lua`.
+1. Place `LabelColors.lua` in `gma3_library/datapools/plugins/` (internal drive or USB).
+2. In the **Plugin Pool**, **Edit** the plugin and set **FileName** to `LabelColors.lua`.
 3. Use **ReloadAllPlugins** when you update the external file to apply changes.
 
-
 ## Usage
-1. Run the **Name Colors** plugin.
+1. Run the **Label Colors** plugin.
 2. In the dialog:
    - Enter **First Preset** and **Last Preset** (e.g., `1` and `50`). Do **not** include `4.`.
    - Choose **Color table**: *HTML colors* or *Basic colors*.
@@ -71,4 +70,3 @@ This stores the code inside the showfile; no file paths needed.
 This project is licensed under the **MIT License**.  
 See the [LICENSE](LICENSE) file for details.  
 SPDX-License-Identifier: MIT
-
